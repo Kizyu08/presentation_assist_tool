@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{97915907-70F3-48BA-A594-F5CFF2EDE30E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WindowsFormsApplication1</RootNamespace>
+    <AssemblyName>WindowsFormsApplication1</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="OpenCVLib210">
+      <HintPath>..\..\..\..\Lib\OpenCVLib210.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenCvSharp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=6adad1e807fea099, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\opencvsharp の初めの設定\ConsoleApplication1\bin\Debug\OpenCvSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenCvSharp.Blob, Version=1.0.0.0, Culture=neutral, PublicKeyToken=6adad1e807fea099, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\AppData\Local\Temporary Projects\WindowsFormsApplication1\OpenCvSharp.Blob.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenCvSharp.CPlusPlus, Version=1.0.0.0, Culture=neutral, PublicKeyToken=6adad1e807fea099, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\OpenCvSharp.CPlusPlus.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenCvSharp.Extensions, Version=1.0.0.0, Culture=neutral, PublicKeyToken=6adad1e807fea099, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\OpenCvSharp.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenCvSharp.UserInterface, Version=1.0.0.0, Culture=neutral, PublicKeyToken=6adad1e807fea099, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\WindowsFormsApplication1 - コピー\WindowsFormsApplication1\OpenCvSharp.UserInterface.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="OpenCvSharp.Blob.dll.config" />
+    <None Include="OpenCvSharp.CPlusPlus.dll.config" />
+    <None Include="OpenCvSharp.dll.config" />
+    <None Include="OpenCvSharp.MachineLearning.dll.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="libopencv_calib3d245.dll" />
+    <Content Include="libopencv_contrib245.dll" />
+    <Content Include="libopencv_core245.dll" />
+    <Content Include="libopencv_features2d245.dll" />
+    <Content Include="libopencv_flann245.dll" />
+    <Content Include="libopencv_gpu245.dll" />
+    <Content Include="libopencv_highgui245.dll" />
+    <Content Include="libopencv_imgproc245.dll" />
+    <Content Include="libopencv_legacy245.dll" />
+    <Content Include="libopencv_ml245.dll" />
+    <Content Include="libopencv_nonfree245.dll" />
+    <Content Include="libopencv_objdetect245.dll" />
+    <Content Include="libopencv_photo245.dll" />
+    <Content Include="libopencv_stitching245.dll" />
+    <Content Include="libopencv_superres245.dll" />
+    <Content Include="libopencv_video245.dll" />
+    <Content Include="libopencv_videostab245.dll" />
+    <Content Include="OpenCvSharp.Blob.dll" />
+    <Content Include="OpenCvSharp.Blob.xml" />
+    <Content Include="OpenCvSharp.CPlusPlus.dll" />
+    <Content Include="OpenCvSharp.CPlusPlus.xml" />
+    <Content Include="OpenCvSharp.DebuggerVisualizers.dll" />
+    <Content Include="OpenCvSharp.dll" />
+    <Content Include="OpenCvSharp.Extensions.dll" />
+    <Content Include="OpenCvSharp.Extensions.xml" />
+    <Content Include="OpenCvSharp.MachineLearning.dll" />
+    <Content Include="OpenCvSharp.MachineLearning.xml" />
+    <Content Include="OpenCvSharp.UserInterface.dll" />
+    <Content Include="OpenCvSharp.UserInterface.xml" />
+    <Content Include="OpenCvSharp.xml" />
+    <Content Include="OpenCvSharpExtern.dll" />
+    <Content Include="opencv_calib3d245.dll" />
+    <Content Include="opencv_calib3d245d.dll" />
+    <Content Include="opencv_contrib245.dll" />
+    <Content Include="opencv_contrib245d.dll" />
+    <Content Include="opencv_core245.dll" />
+    <Content Include="opencv_core245d.dll" />
+    <Content Include="opencv_features2d245.dll" />
+    <Content Include="opencv_features2d245d.dll" />
+    <Content Include="opencv_ffmpeg.dll" />
+    <Content Include="opencv_ffmpeg245.dll" />
+    <Content Include="opencv_ffmpeg245_64.dll" />
+    <Content Include="opencv_ffmpeg_64.dll" />
+    <Content Include="opencv_flann245.dll" />
+    <Content Include="opencv_flann245d.dll" />
+    <Content Include="opencv_gpu245.dll" />
+    <Content Include="opencv_gpu245d.dll" />
+    <Content Include="opencv_highgui245.dll" />
+    <Content Include="opencv_highgui245d.dll" />
+    <Content Include="opencv_imgproc245.dll" />
+    <Content Include="opencv_imgproc245d.dll" />
+    <Content Include="opencv_legacy245.dll" />
+    <Content Include="opencv_legacy245d.dll" />
+    <Content Include="opencv_ml245.dll" />
+    <Content Include="opencv_ml245d.dll" />
+    <Content Include="opencv_nonfree245.dll" />
+    <Content Include="opencv_nonfree245d.dll" />
+    <Content Include="opencv_objdetect245.dll" />
+    <Content Include="opencv_objdetect245d.dll" />
+    <Content Include="opencv_photo245.dll" />
+    <Content Include="opencv_photo245d.dll" />
+    <Content Include="opencv_stitching245.dll" />
+    <Content Include="opencv_stitching245d.dll" />
+    <Content Include="opencv_superres245.dll" />
+    <Content Include="opencv_superres245d.dll" />
+    <Content Include="opencv_ts245.dll" />
+    <Content Include="opencv_ts245d.dll" />
+    <Content Include="opencv_video245.dll" />
+    <Content Include="opencv_video245d.dll" />
+    <Content Include="opencv_videostab245.dll" />
+    <Content Include="opencv_videostab245d.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
