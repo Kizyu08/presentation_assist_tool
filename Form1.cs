@@ -23,7 +23,7 @@ namespace WindowsFormsApplication1
     public partial class Form1 : Form
     {        
         System.Diagnostics.Stopwatch timer = new System.Diagnostics.Stopwatch();
-        IplImage image;
+        IplImage image = new IplImage();
         Timer t;
         Timer t1;
         //Timer test;
@@ -82,7 +82,7 @@ namespace WindowsFormsApplication1
             }
 
             t = new Timer();
-            t.Interval = 5000;                  //修正:500→5000
+            t.Interval = 2500;                  //修正:500→5000
             t.Tick += new EventHandler(un);
             t.Start();
             writeLog("タイマーt開始");
@@ -96,6 +96,7 @@ namespace WindowsFormsApplication1
             writeLog("F5キーを送信します...");
             SendKeys.Send("{F5}");
             TopMost = true;
+            //this.Focus();
            
             t1 = new Timer();
             t1.Tick += new EventHandler(uun);
@@ -110,8 +111,24 @@ namespace WindowsFormsApplication1
             writeLog("タイマーt停止");
             t1.Stop();
             writeLog("タイマーt1停止");
-           
+
+            //using (var cap = Cv.CreateCameraCapture(0)) // カメラのキャプチャ
+            //{
+                //IplImage im = new IplImage();           // カメラ画像格納用の変数
+                //while (Cv.WaitKey(1) == -1)             // 任意のキーが入力されるまでカメラ映像を表示
+                //{
+                //    im = Cv.QueryFrame(capture);            // カメラからフレーム(画像)を取得
+                //    Cv.ShowImage("Test", im);           //  カメラ映像の表示
+                //    //Bitmap iplim = BitmapConverter.ToBitmap(im);
+                //    //pictureBox2.Image = iplim;
+                //}
+            //}
+
+            //this.Focus();
+
             image = Cv.QueryFrame(capture);		//撮影
+            Cv.ReleaseImage(image);
+            image = Cv.QueryFrame(capture);
             writeLog("撮影し、imageに格納しました");
             
 
@@ -151,8 +168,13 @@ namespace WindowsFormsApplication1
                     //fs.StartWriteStruct("contour", NodeType.Seq);
                     // (4)輪郭を構成する頂点座標を取得
                     CvPoint tmp = contour[-1].Value;
+                    int vertex_count = contours.Total;
+                    writeLog("頂点が" + vertex_count + "個検出されました");
                     for (int i = 0; i < contour.Total; i++)
                     {
+                        int count = i + 1 ;
+                        writeLog(count + "回目のトライです");
+                        writeLog("キャリブレーションを試みます...");
                         if (contour.Total == 4 && contours.Total ==1)
                         {
                             writeLog("4つの頂点と1の矩形が検出されました");
@@ -312,6 +334,7 @@ namespace WindowsFormsApplication1
                     }
                 }
                 Cv.ReleaseImage(image);
+                
                 writeLog("imageに使用していたメモリを開放します");
 
             }
@@ -333,10 +356,10 @@ namespace WindowsFormsApplication1
             IplImage heey = Cv.Clone(hyy);
 
             //撮影画像を8bit化しimgHSVに格納
-            IplImage imgHSV = Cv.CreateImage(new CvSize(runruntattta.Width, runruntattta.Height), BitDepth.U8, 1);
+            IplImage imgHSV = Cv.CreateImage(new CvSize(runruntattta.Width, runruntattta.Height), BitDepth.U8, 3);
 
             //撮影画像をBGRからHSV化してimgHSVに格納
-            Cv.CvtColor(runruntattta, imgHSV, ColorConversion.BgrToHsv);
+            Cv.CvtColor(runruntattta, imgHSV, ColorConversion.BgrToHsv);        //ERROR!!
 
             //imgHSVを8bit化してimgToに格納
             IplImage imgTo = Cv.CreateImage(new CvSize(imgHSV.Width, imgHSV.Height), BitDepth.U8, 1);
@@ -481,6 +504,29 @@ namespace WindowsFormsApplication1
                 }
                 return null;
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            string filename;
+            DateTime dt = new DateTime();
+            dt = System.DateTime.Now;
+            filename = dt.ToString("yyyy.MM.dd_hh.mm.ss") + ".txt";
+
+            System.IO.StreamWriter sw = new System.IO.StreamWriter(@filename, false, System.Text.Encoding.GetEncoding("shift_jis"));
+            foreach(string line in textBox_Log.Lines)
+            {
+                sw.WriteLine(line);
+            }
+            sw.Close();
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            settings set = new settings();
+            set.ShowDialog(this);
+
         }       
     }
 }
