@@ -26,48 +26,252 @@ namespace WindowsFormsApplication1.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("0")]
-        public int Color_R {
+        public decimal ext_R {
             get {
-                return ((int)(this["Color_R"]));
+                return ((decimal)(this["ext_R"]));
             }
             set {
-                this["Color_R"] = value;
+                this["ext_R"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("0")]
-        public int Color_G {
+        public decimal ext_G {
             get {
-                return ((int)(this["Color_G"]));
+                return ((decimal)(this["ext_G"]));
             }
             set {
-                this["Color_G"] = value;
+                this["ext_G"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("0")]
-        public int Color_B {
+        public decimal ext_B {
             get {
-                return ((int)(this["Color_B"]));
+                return ((decimal)(this["ext_B"]));
             }
             set {
-                this["Color_B"] = value;
+                this["ext_B"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("False")]
-        public bool Autoc {
+        public bool autoc {
             get {
-                return ((bool)(this["Autoc"]));
+                return ((bool)(this["autoc"]));
             }
             set {
-                this["Autoc"] = value;
+                this["autoc"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public decimal ext_H1 {
+            get {
+                return ((decimal)(this["ext_H1"]));
+            }
+            set {
+                this["ext_H1"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public decimal ext_S1 {
+            get {
+                return ((decimal)(this["ext_S1"]));
+            }
+            set {
+                this["ext_S1"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public decimal ext_V1 {
+            get {
+                return ((decimal)(this["ext_V1"]));
+            }
+            set {
+                this["ext_V1"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public decimal ext_H2 {
+            get {
+                return ((decimal)(this["ext_H2"]));
+            }
+            set {
+                this["ext_H2"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public decimal ext_S2 {
+            get {
+                return ((decimal)(this["ext_S2"]));
+            }
+            set {
+                this["ext_S2"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public decimal ext_V2 {
+            get {
+                return ((decimal)(this["ext_V2"]));
+            }
+            set {
+                this["ext_V2"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public double X1 {
+            get {
+                return ((double)(this["X1"]));
+            }
+            set {
+                this["X1"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public double Y1 {
+            get {
+                return ((double)(this["Y1"]));
+            }
+            set {
+                this["Y1"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public double X2 {
+            get {
+                return ((double)(this["X2"]));
+            }
+            set {
+                this["X2"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public double Y2 {
+            get {
+                return ((double)(this["Y2"]));
+            }
+            set {
+                this["Y2"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public double X3 {
+            get {
+                return ((double)(this["X3"]));
+            }
+            set {
+                this["X3"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public double Y3 {
+            get {
+                return ((double)(this["Y3"]));
+            }
+            set {
+                this["Y3"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public double X4 {
+            get {
+                return ((double)(this["X4"]));
+            }
+            set {
+                this["X4"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public double Y4 {
+            get {
+                return ((double)(this["Y4"]));
+            }
+            set {
+                this["Y4"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool autoopen {
+            get {
+                return ((bool)(this["autoopen"]));
+            }
+            set {
+                this["autoopen"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool Filter1 {
+            get {
+                return ((bool)(this["Filter1"]));
+            }
+            set {
+                this["Filter1"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool MousePaint {
+            get {
+                return ((bool)(this["MousePaint"]));
+            }
+            set {
+                this["MousePaint"] = value;
             }
         }
     }
